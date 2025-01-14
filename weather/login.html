@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
+    <style>
+        /* Style for the spline animation */
+     spline-viewer {
+            position: absolute;
+            bottom: 10px; /* Adjust bottom offset as needed */
+            right: 10px; /* Adjust right offset as needed */
+            width: 250px; /* Set the desired width of the animation */
+            height: 300px; /* Set the desired height of the animation */
+            z-index: 10; /* Ensure it is above other elements if needed */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- Animation -->
+    <spline-viewer url="https://prod.spline.design/2rnozA12-ytcTvjJ/scene.splinecode"></spline-viewer>
+
+    <!-- Login Form -->
+    <div class="login-container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            <button type="submit">Login</button>
+            <div id="error-message" style="color:red; display:none;">Invalid username or password!</div>
+        </form>
+    </div>
+
+    <script src="login.js"></script> <!-- Link to your JavaScript -->
+</body>
+</html>

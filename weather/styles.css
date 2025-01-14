@@ -1,0 +1,108 @@
+/* Basic styles for the body */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/anime.jpg');
+    background-size: cover; /* Adjusts the size of the background image */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+
+
+}
+
+/* Login container styling */
+.login-container {
+   
+    width: 350px;
+    height: max-content;
+    min-height: 300px;
+    background: rgba(239, 242, 243, 0.5); /* Slight transparency for glass effect */
+    border-radius: 30px;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 1); /* Soft shadow for depth */
+    padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px); /* Frosted glass blur effect */
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Light border to emphasize the glass effect */
+    transition: transform 0.2s ease-in-out; 
+}
+
+/* Input field styling */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover effect for button */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Error message styling */
+#error-message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+
+
+.cont{
+    padding: 50px;
+    perspective: 100px;
+
+}
+.card{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background: linear-gradient(45deg,#A5FECB, #20BDFF);
+    border-radius: 20px;
+    transition: transform 0.1s ease;
+    transform-style: preserve-3d;
+}
+.box{
+    background: linear-gradient(#ffffff27,#ffffff28);
+    position:absolute;
+    box-shadow: -5px 5px 10px#64646f33;
+    border-radius: inherit;
+}
+.box:nth-child(1){
+    inset: 20px;
+    transform: translate3d(0,0,10px);
+}
+.box:nth-child(2){
+    inset: 20px;
+    transform: translate3d(0,0,5px);
+}
+.box:nth-child(3){
+    inset: 20px;
+    transform: translate3d(0,0,2px);
+}

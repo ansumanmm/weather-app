@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <input type="text" autocomplete="off" id="valueSearch" placeholder="Enter city name">
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <button id="useLocationBtn">
+            <i class="fa-solid fa-location-arrow"></i>
+        </button>
+        <div id="loading" style="display: none;">Loading...</div>
+        <p id="error-message" style="color: red; display: none;">Unable to retrieve weather data. Please check your connection or try again later.</p>
+
+        <section class="result">
+            <figure class="name" id="city">
+                <figcaption>London</figcaption>
+                <img src="https://flagsapi.com/GB/shiny/32.png" alt="London flag">
+            </figure>
+            <figure class="temperature" id="temperature">
+                <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="Weather icon">
+                <figcaption>
+                    <span>31</span>
+                    <sup>o</sup>
+                </figcaption>
+            </figure>
+            <p id="description" class="description">Overcast clouds</p>
+            <div id="dateTime">date</div>
+            <ul id="weather-details">
+                <div class="scrollable-container">
+                    <li>
+                        <span>Clouds</span>
+                        <i class="fa-solid fa-cloud"></i>
+                        <span id="clouds">98</span>%
+                    </li>
+                    <li>
+                        <span>Humidity</span>
+                        <i class="fa-solid fa-droplet"></i>
+                        <span id="humidity">55</span>%
+                    </li>
+                    <li>
+                        <span>Pressure</span>
+                        <i class="fa-solid fa-gauge"></i>
+                        <span id="pressure">1001</span> hPa
+                    </li>
+                    <li>
+                        <span>Feels-Like</span>
+                        <i class="fa-solid fa-ice"></i>
+                        <span id="feels">12</span>
+                        <sup>o</sup>
+                    </li>
+                </div>
+            </ul>
+        </section>
+
+        <!-- Map container -->
+        
+    </main>
+    <div id="map" style="height: 300px; width: 20%; margin-top: 20px; margin-left: 20px; 
+                    border: 2px solid rgba(0, 0, 0, 0.1); 
+                    padding: 10px; 
+                    border-radius: 15px;
+                    background-color: rgba(203, 220, 226, 0.5); 
+                    backdrop-filter: blur(10px); 
+                    box-shadow: 0 30px 50px rgba(0, 0, 0, 5); 
+                    transition: transform 0.3s ease-in-out; 
+                    color: rgb(0, 0, 0);">
+    MAP
+</div>
+<footer>
+    <p id="scrolling-text">&#169; 2025 Created by Ansuman</p>
+</footer>
+
+
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
